@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<!-- CE Compat included. Vanilla Incompatible. 
+
+Original art and xml by Odz
+
+note design :
+
+ As a result of the increased danger to its soldiers on the front line, the German Army developed armour to provide greater protection from incoming fire and shrapnel. Made of CR Sheet (Iron Sheet) which is 11 gauge thick, the armour had an articulated design and consisted of a single main chest plate with three smaller articulated plates beneath it for flexibility. The armour was designed to fit over a soldier's uniform and provide protection to the chest, abdomen and groin. 
+
+Although the armour provided additional protection, it was too heavy to be used by assault units and had mainly been used by machine gunners and snipers.
+
+Calculation :
+
+
+Standard steel realistic 11 Gauge thickness(mm) =  3.038
+
+realistic medieval cuirass thickness (gauge) = 14~16 = 1.8mm
+
+coeff = 1.69
+
+CE Cuirass Medieval = 4mm MPA 6mm RHA * 4.5 stuff effect
+                      20 Bulk 4.0 Worn Bulk 7.5 Mass
+
+Trench armor =  6.7 MPA 10.4 RHA
+                         
+
+-->
+
+  <ThingDef ParentName="ArmorMachineableBase">
+    <defName>ODZ_WWI_TrenchArmor</defName>
+    <label>Imperial German Trench Armor</label>
+    <description>Nicknamed "Lobster armor" this is worn by German sentry's and machinegunners.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <researchPrerequisite>PlateArmor</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedSteeledTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Apparel/Middle/WW1TrenchArmor/TrenchArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>	 	  
+      <drawSize>1.00</drawSize>
+    </graphicData>
+    <costStuffCount>70</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <statBases>
+      <WorkToMake>12500</WorkToMake>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Mass>5.5</Mass>
+      <Bulk>25</Bulk>
+      <WornBulk>5</WornBulk>
+      <StuffEffectMultiplierArmor>4.5</StuffEffectMultiplierArmor>
+      <ArmorRating_Heat>0.28</ArmorRating_Heat>
+      <Insulation_Cold>0.12</Insulation_Cold>
+      <EquipDelay>6</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+    <useWornGraphicMask>true</useWornGraphicMask>		
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Middle/WW1TrenchArmor/TrenchArmor</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>Outlander</li>
+        <li>IndustrialMilitaryBasic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.PartialArmorExt">
+        <stats>
+          <li>
+            <ArmorRating_Sharp>1.4</ArmorRating_Sharp>
+            <parts>
+              <li>Shoulder</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Blunt>0.67</ArmorRating_Blunt>
+            <parts>
+              <li>Shoulder</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Sharp>0.9</ArmorRating_Sharp>
+            <parts>
+              <li>Neck</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+            <parts>
+              <li>Neck</li>
+            </parts>
+          </li>          
+        </stats>
+      </li>
+    </modExtensions>
+    <tradeTags>
+      <li>Clothing</li>
+      <li>Armor</li>
+    </tradeTags>       
+  </ThingDef>
+
+
+ <!-- Soviet plate armor, more light to wear, same protection --> 
+
+ <ThingDef ParentName="ArmorMachineableBase">
+    <defName>ODZ_WWII_SovietPlateArmor</defName>
+    <label>Soviet Plate Armor</label>
+    <description>Named "Stalnoi Nagrudnik" or Breastplate Armor, this was designed by the Red Army to protect assault engineers and demining brigades.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <researchPrerequisite>PlateArmor</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedSteeledTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Apparel/Middle/SovietPlateArmor/SovietPlateArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    <shaderType>CutoutComplex</shaderType>      
+      <drawSize>1.00</drawSize>
+    </graphicData>
+    <costStuffCount>70</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <statBases>
+      <WorkToMake>13500</WorkToMake>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Mass>4.5</Mass>
+      <Bulk>22</Bulk>
+      <WornBulk>5</WornBulk>
+      <StuffEffectMultiplierArmor>4.5</StuffEffectMultiplierArmor>
+      <ArmorRating_Heat>0.28</ArmorRating_Heat>
+      <Insulation_Cold>0.12</Insulation_Cold>
+      <EquipDelay>6</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+    <useWornGraphicMask>true</useWornGraphicMask>   
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Middle/SovietPlateArmor/SovietPlateArmor</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>Outlander</li>
+        <li>IndustrialMilitaryBasic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.PartialArmorExt">
+        <stats>
+          <li>
+            <ArmorRating_Sharp>1.4</ArmorRating_Sharp>
+            <parts>
+              <li>Shoulder</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Blunt>0.67</ArmorRating_Blunt>
+            <parts>
+              <li>Shoulder</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Sharp>0.9</ArmorRating_Sharp>
+            <parts>
+              <li>Neck</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+            <parts>
+              <li>Neck</li>
+            </parts>
+          </li>          
+        </stats>
+      </li>
+    </modExtensions>
+    <tradeTags>
+      <li>Clothing</li>
+      <li>Armor</li>
+    </tradeTags>       
+  </ThingDef>
+
+</Defs>
