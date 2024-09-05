@@ -1,4 +1,4 @@
-#Continued Armors and Apparels for CE
+# Continued Armors and Apparels for CE
 
 This a fork of some outdated or abandonned armors and apparels, meant to use with CE only. Those apparels were unpatched for CE, so I included whole compatibility in the defs (No vanilla compatible!).
 
